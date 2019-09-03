@@ -3,5 +3,5 @@
     $qry="SELECT name FROM tbl_web WHERE id=1";
     $result = pg_query($db_connection, $qry);
     echo $result;
-    echo 'bbb';
+    echo "bbb";
 ?>
