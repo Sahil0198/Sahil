@@ -28,16 +28,16 @@ if(isset($_POST['btn']))
     echo "<script>alert('Data not Saved')</script>"; 
   }
 }
-  // $result = pg_query($db,"SELECT * FROM webhook.tbl_web");
-// echo "<table>";
-// while($row=pg_fetch_assoc($result))
-// {
-//   echo "<tr>";
-//   echo "<td align='center' width='200'>" . $row['id'] . "</td>";
-//   echo "<td align='center' width='200'>" . $row['name'] . "</td>";
-//   echo "</tr>";
-// }
-//   echo "</table>";?>
+  $result = pg_query($db,"SELECT * FROM public.shopify");
+echo "<table>";
+while($row=pg_fetch_assoc($result))
+{
+  echo "<tr>";
+  echo "<td align='center' width='200'>" . $row['id'] . "</td>";
+  echo "<td align='center' width='200'>" . $row['name'] . "</td>";
+  echo "</tr>";
+}
+  echo "</table>";?>
 </div>
 </body>
 </html>
