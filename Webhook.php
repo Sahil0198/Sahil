@@ -14,7 +14,17 @@
   </form>
 <?php
 $db = pg_connect("host=ec2-174-129-227-146.compute-1.amazonaws.com port=5432 dbname=d6e3ftk139ub4t user=ggmwcclozzctgy password=2e72adfb860fa8fc865e14c969823ba27529638d9be4ea7bdf76dcca3bd97d5d");
-// $result = pg_query($db,"SELECT * FROM webhook.tbl_web");
+$qry="insert into public.shopify values('preety')";
+  $res=pg_query($db,$qry);
+  if($res > 0)
+  {
+      echo "<script>alert('Data Saved Successfully')</script>"; 
+  }
+  else
+  {
+    echo "<script>alert('Data not Saved')</script>"; 
+  }
+  // $result = pg_query($db,"SELECT * FROM webhook.tbl_web");
 // echo "<table>";
 // while($row=pg_fetch_assoc($result))
 // {
