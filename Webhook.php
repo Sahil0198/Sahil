@@ -10,11 +10,14 @@
   <form name="frm" method="post">
     <label>Name</label>
     <input type="text" name="t1" placeholder="Enter your Name"><br><br>
-    <input type="submit" name="b1" value="SUBMIT" />
+    <input type="submit" name="btn" value="SUBMIT" />
   </form>
 <?php
 $db = pg_connect("host=ec2-174-129-227-146.compute-1.amazonaws.com port=5432 dbname=d6e3ftk139ub4t user=ggmwcclozzctgy password=2e72adfb860fa8fc865e14c969823ba27529638d9be4ea7bdf76dcca3bd97d5d");
-$qry="insert into public.shopify(name)values('preety')";
+if(isset($_POST['btn']))
+{
+  $a=$_POST['t1'];
+  $qry="insert into public.shopify(name)values($a)";
   $res=pg_query($db,$qry);
   if($res > 0)
   {
@@ -24,6 +27,7 @@ $qry="insert into public.shopify(name)values('preety')";
   {
     echo "<script>alert('Data not Saved')</script>"; 
   }
+}
   // $result = pg_query($db,"SELECT * FROM webhook.tbl_web");
 // echo "<table>";
 // while($row=pg_fetch_assoc($result))
