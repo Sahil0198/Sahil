@@ -17,7 +17,7 @@ $db = pg_connect("host=ec2-174-129-227-146.compute-1.amazonaws.com port=5432 dbn
 if(isset($_POST['btn']))
 {
   $a=$_POST['t1'];
-  $qry="insert into public.shopify(name)values($a)";
+  $qry="insert into public.shopify(name)values('$a')";
   $res=pg_query($db,$qry);
   if($res > 0)
   {
