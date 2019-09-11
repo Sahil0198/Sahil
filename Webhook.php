@@ -17,9 +17,4 @@ $db = pg_connect("host=ec2-174-129-227-146.compute-1.amazonaws.com port=5432 dbn
 		$data = json_decode($webhook_content, true); //convert the json to array
 		echo $data[1];
 	
-}
-// Launching migration process now
-$Shopify = new Shopify();
-$results = $Shopify->processCustomersMigration();
-echo $results;
 ?>
