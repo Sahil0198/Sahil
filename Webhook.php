@@ -7,9 +7,5 @@
 	}
 	fclose($webhook); //close the resource
 	$data = json_decode($webhook_content, true); //convert the json to array
-	$headers = "From: KPStore <shop.support@kpstore.com> \r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-	echo mail("sahil.indybytes@gmail.com","Shopify Store: New Order Placed From Customer",$data,$headers);echo "\n";
-	echo file_put_contents("test.txt",$data);
+	echo $data[0];
 ?>
