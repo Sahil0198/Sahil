@@ -5,6 +5,4 @@ if($data) {
   fwrite($file,$data);
   fclose($file);
 }
-echo $data['title']."<br>";
-echo $data['product_type']."<br>";
 ?>
