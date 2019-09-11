@@ -1,10 +1,10 @@
 <?php
 echo 'sahil';
 // Initializing pdo instance & shopify api credentials 
-	private $db;
-	private $api_key = "087f5c7784a37deecd2bde33a2cb1e09";
-	private $password = "fb28a213fbcb9abba68d78aeff3e08d4";
-	private $store = "sahil-indybytes-98.myshopify.com"
+		$db;
+		$api_key = "087f5c7784a37deecd2bde33a2cb1e09";
+		$password = "fb28a213fbcb9abba68d78aeff3e08d4";
+		$store = "sahil-indybytes-98.myshopify.com"
 
 		$webhook_content = '';
 		$webhook = fopen('php://input' , 'rb');
