@@ -3,7 +3,7 @@
 if($data) {
   $data1 = json_decode($data, true);
   $file = fopen("test.txt","w");
-  fwrite($file,$data1);
+  fwrite($file,$data);
   fclose($file);
 }
 ?>
