@@ -5,8 +5,13 @@ if($data) {
   $data1 = json_decode($data, true);
   $qry = "insert into webhook.webhook_tbl(product_data)values('$data1')";
   $res=pg_query($db,$qry);
-  $file = fopen("test.txt","w");
-  fwrite($file,$data);
-  fclose($file);
+  if($res >= 0)
+    {
+        echo "<script>alert('data store successfully')</script";
+    }
+  else
+    {
+        echo "<script>alert('data not store')</script>";
+    }
 }
 ?>
