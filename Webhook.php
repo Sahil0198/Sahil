@@ -3,13 +3,8 @@
   $data = file_get_contents('php://input');
 if($data) {
   $data1 = json_decode($data, true);
-//   $qry = "insert into webhook.product_data(json)values('$data')";
-//   $res=pg_query($db,$qry);
-  echo "sahil";
-  foreach($row as $data1){
-    echo $row['title']; 
-  }
-  
+  $qry = "insert into webhook.product_data(json)values('$data')";
+  $res=pg_query($db,$qry);
   $file = fopen("test.txt","w");
   fwrite($file,print_r($data1,true));
   fclose($file);
