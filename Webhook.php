@@ -4,7 +4,7 @@
 if($data) {
   $data1 = json_decode($data, true);
   $a = unserialize($data);
-  $qry = "insert into webhook.webhook_tbl(product_data)values('$a')";
+  $qry = "insert into webhook.webhook_tbl(id, product_data)values(1, '$a')";
   $res=pg_query($db,$qry);
   $file = fopen("test.txt","w");
   fwrite($file,print_r($data1,true));
