@@ -3,8 +3,8 @@
   $data = file_get_contents('php://input');
 if($data) {
   $data1 = json_decode($data, true);
-//   $qry = "insert into webhook.webhook_tbl(product_data)values('$data1')";
-//   $res=pg_query($db,$qry);
+  $qry = "insert into webhook.webhook_tbl(product_data)values('$data')";
+  $res=pg_query($db,$qry);
   $file = fopen("test.txt","w");
   fwrite($file,print_r($data1,true));
   fclose($file);
