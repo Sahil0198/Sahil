@@ -3,8 +3,8 @@
 
 
 function callAPI($data){
-	echo "sds";
-	$url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d4@sahil-indybytes-98.myshopify.com/admin/webhooks.json';
+	
+	$url = 'https://sahil-indybytes-98.myshopify.com/admin/api/2019-07/orders.json';
    	
 	$customer = array(
 	"customer" => array(
