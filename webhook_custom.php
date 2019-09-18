@@ -23,7 +23,7 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
 	//   $qry = "insert into webhook.product_data(json)values('$data')";
 	//   $res=pg_query($db,$qry);
 	  $file = fopen("test_custom.txt","w");
-	  fwrite($file,print_r($data2,true));
+	  fwrite($file,print_r($data_string,true));
 	  fclose($file);
 
 
