@@ -2,7 +2,7 @@
 <?php
 $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d4@sahil-indybytes-98.myshopify.com';
    	$shopify = $url . '/admin/webhooks.json';
-	$arguments = array( 'webhook' => array('topic' => 'orders/create',
+	$arguments = array( 'webhook' => array('topic' => 'products/create',
 	'address' => 'https://shopifyhooks.herokuapp.com/webhook_custom.php',
 	'format' => 'json'
 	));
