@@ -6,7 +6,7 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
 	'address' => 'https://shopifyhooks.herokuapp.com/webhook_custom.php',
 	'format' => 'json'
 	));
-	echo $data_string = json_encode($arguments);
+	$data_string = json_encode($arguments);
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $shopify);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
@@ -16,8 +16,15 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
 	$data = curl_exec($ch);
 
 	curl_close($ch);
-	print_r($data);
 	return $data;
+	$data1 = file_get_contents('php://input');
+	if($data1) {
+	  $data2 = json_decode($data1, true);
+	//   $qry = "insert into webhook.product_data(json)values('$data')";
+	//   $res=pg_query($db,$qry);
+	  $file = fopen("test_custom.txt","w");
+	  fwrite($file,print_r($data2,true));
+	  fclose($file);
 
 
 
