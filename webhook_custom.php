@@ -7,16 +7,17 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
 	'format' => 'json'
 	));
 	echo $data_string = json_encode($arguments);
-// 	$ch = curl_init();
-// 	curl_setopt($ch, CURLOPT_URL, $shopify);
-//         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-//         curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));
-// 	curl_setopt($ch, CURLOPT_POST, true);
-// 	curl_setopt($ch, CURLOPT_POST, true);
-// 	$data = curl_exec($ch);
-
-// 	curl_close($ch);
-// 	return $data;
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $shopify);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Content-Length: ' . strlen($data_string)));
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POST, true);
+	$data = curl_exec($ch);
+	
+	curl_close($ch);
+	echo $data;
+	return $data;
 // 	$data1 = file_get_contents('php://input');
 // 	if($data_string ) {
 // 	  $data2 = json_decode($data1, true);
