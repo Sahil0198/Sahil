@@ -18,7 +18,7 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
 	curl_close($ch);
 	return $data;
 	$data1 = file_get_contents('php://input');
-	if($data1) {
+	if($data_string ) {
 	  $data2 = json_decode($data1, true);
 	//   $qry = "insert into webhook.product_data(json)values('$data')";
 	//   $res=pg_query($db,$qry);
