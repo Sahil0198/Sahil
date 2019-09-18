@@ -2,10 +2,10 @@
 <?php
 $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d4@sahil-indybytes-98.myshopify.com';
    	$shopify = $url . '/admin/webhooks.json';
-	$arguments = array('topic' => 'order/creation',
+	$arguments = array( 'webhook' => array('topic' => 'order/creation',
 	'address' => 'https://shopifyhooks.herokuapp.com/webhook_custom.php',
 	'format' => 'json'
-	);
+	));
 	$data_string = json_encode($arguments);
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $shopify);
