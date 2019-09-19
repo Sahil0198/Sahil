@@ -5,6 +5,11 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
 	$arguments = array( 'webhook' => array('topic' => 'products/create',
 	'address' => 'https://shopifyhooks.herokuapp.com/Webhook.php',
 	'format' => 'json'
+	),
+	(
+		'topic' => 'products/update',
+		'address' => 'https://shopifyhooks.herokuapp.com/Webhook.php',
+		'format' => 'json'
 	));
 	echo $data_string = json_encode($arguments);
 	$ch = curl_init();
