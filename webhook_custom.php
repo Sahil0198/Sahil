@@ -2,7 +2,9 @@
 <?php
 $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d4@sahil-indybytes-98.myshopify.com';
    	$shopify = $url . '/admin/webhooks.json';
-	$arguments = array( 'webhook' => array('topic' => 'products/update',
+	$topics = ['products/update', 'products/create'];
+	foreach ($topics as $topic){
+	$arguments = array( 'webhook' => array('topic' => $topic,
 	'address' => 'https://shopifyhooks.herokuapp.com/Webhook.php',
 	'format' => 'json'
 	));
@@ -18,4 +20,5 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
 	curl_close($ch);
 	echo $data;
 	return $data;
+	}
 ?>
