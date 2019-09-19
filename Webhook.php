@@ -7,7 +7,7 @@ if($data) {
   $res=pg_query($db,$qry);
   $a = $data1->title;
   $file = fopen("test.txt","w");
-  fwrite($file,print_r($data1,true));
+  fwrite($file,print_r($data,true));
   fclose($file);
 }
 ?>
