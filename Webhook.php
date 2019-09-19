@@ -5,7 +5,8 @@ if($data) {
   $data1 = json_decode($data, true);
   $qry = "insert into webhook.product_data(json)values('$data')";
   $res=pg_query($db,$qry);
-  $a = $data1['title'];
+  $a = "Title : ".$data1['title']."\n";
+  $a .= "id :".$data1['id']."\n";
   $file = fopen("test.txt","w");
   fwrite($file, $a);
   fclose($file);
