@@ -7,7 +7,7 @@ if($data) {
   //$res=pg_query($db,$qry);
   $a = "Title : ".$data1['title']."\n";
   $a .= "id :".$data1['id']."\n";
-  $file = fopen("test.txt","w");
+  $file = fopen("https://shopifyhooks.herokuapp.com","w");
   fwrite($file, print_r($data1, true));
   fclose($file);
 }
