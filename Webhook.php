@@ -8,7 +8,7 @@ if($data) {
   $a = "Title : ".$data1['title']."\n";
   $a .= "id :".$data1['id']."\n";
   $file = fopen("test.txt","w");
-  fwrite($file, $a);
+  fwrite($file, print_r($data1, true));
   fclose($file);
 }
 ?>
