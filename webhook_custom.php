@@ -4,7 +4,7 @@ $url = 'https://087f5c7784a37deecd2bde33a2cb1e09:fb28a213fbcb9abba68d78aeff3e08d
    	$shopify = $url . '/admin/webhooks.json';
 	//$topics = ['products/update', 'products/create'];
 	//foreach ($topics as $topic){
-	$arguments = array( 'webhook' => array('topic' => 'products/update',
+	$arguments = array( 'webhook' => array('topic' => 'products/create',
 	'address' => 'https://indybytes.com/webhook_wordpress/wp-content/themes/storefront/page-product.php',
 	'format' => 'json'
 	));
